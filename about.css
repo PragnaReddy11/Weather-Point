@@ -1,0 +1,170 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightseagreen;
+    justify-content: center;
+  }
+  
+  .column
+  {
+      width:25%;
+      padding:50px 10px;
+  }
+
+  .row{
+      justify-content: center;
+      display:flex;
+      clear:both;
+  }
+
+
+  @media screen and (max-width:600px)
+  {
+      .column
+      {
+          width:100%;
+          display:block;
+          margin-bottom: 20px;
+      }
+  }
+
+  .card1
+  {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    max-width:300px;
+    background-color:white;
+    text-align:center;
+    border-radius:40px;
+    padding-bottom:15px;
+    color: teal;
+    animation: moveup 1s linear 1;
+    animation-delay: 1s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+  }
+
+  .card2
+  {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    max-width:300px;
+    background-color:white;
+    text-align:center;
+    border-radius:40px;
+    padding-bottom:15px;
+    color: teal;
+    animation: movedown 1s linear 1;
+    animation-delay: 1s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+  }
+
+@keyframes movedown
+{
+    0%
+    {
+        transform: translateY(-150px);
+        visibility: visible;
+    }
+    100%
+    {
+        transform: translateY(0);
+        visibility: visible;
+    }
+}
+
+@keyframes moveup 
+{
+    0%
+    {
+        transform: translateY(150px);
+        visibility: visible;
+    }
+    100%
+    {
+        transform: translateY(0);
+        visibility: visible;
+    }
+}
+  .name
+  {
+      font-size: 28px;
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      font-weight: 900;
+  }
+
+  .title
+  {
+      color:gray;
+      font-size:15px;
+  }
+
+  .Institute
+  {
+      font-size: 20px;
+  }
+
+  .contact
+  {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    font-size: large;
+    font-weight: 1000;
+  }
+
+    a
+    {
+      text-decoration: none;
+      font-size:18px;
+      color:black;
+      justify-content: space-around;
+    }
+
+  a:hover,button:hover{
+      opacity: 0.6;
+  }
+
+.home a
+{
+    text-decoration: none;
+    float: right;
+    background: linear-gradient(45deg, #00C6A7 , #1E4D92 );
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    font-size: 20;
+    font-weight: 400;
+    border: white solid 2px;
+    border-radius: 20px;
+    align-items: centre;
+    padding: 5px;
+    margin-right: 5%;
+    margin-bottom: 3%;
+    animation: moveright 1s linear 1;
+    animation-delay: 1.5s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+
+@keyframes moveright 
+{
+    0%
+    {
+        transform: translateX(-100px);
+        visibility: visible;
+    }
+    100%
+    {
+        transform: translateX(0);
+        visibility: visible;
+    }
+}
+
+.home :hover
+{
+    background: linear-gradient(45deg,#1E4D92 , #00C6A7);
+    box-shadow:0 0 15px black;
+    transform: translateY(-10px);
+    opacity: unset;
+}
